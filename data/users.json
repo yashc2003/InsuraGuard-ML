@@ -1,0 +1,14 @@
+{
+  "yashc2003": {
+    "password_hash": "74b7b5d749d3854606264a6a49fdcb59783794e7c5dff6fbacc72a393d7716f5",
+    "role": "analytics"
+  },
+  "yashrc2003": {
+    "password_hash": "74b7b5d749d3854606264a6a49fdcb59783794e7c5dff6fbacc72a393d7716f5",
+    "role": "admin"
+  },
+  "yashrc78": {
+    "password_hash": "74b7b5d749d3854606264a6a49fdcb59783794e7c5dff6fbacc72a393d7716f5",
+    "role": "analytics"
+  }
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "timestamp": "2026-03-07 01:43:07",
+    "username": "yashc2003",
+    "role": "analytics",
+    "action": "single_prediction",
+    "insurance_type": "auto",
+    "record_count": 1,
+    "details": "result=Claim, probability=0.0269",
+    "fraud_count": 0
+  },
+  {
+    "timestamp": "2026-03-07 01:44:17",
+    "username": "yashc2003",
+    "role": "analytics",
+    "action": "single_prediction",
+    "insurance_type": "health",
+    "record_count": 1,
+    "details": "result=Claim, probability=0.0629",
+    "fraud_count": 0
+  },
+  {
+    "timestamp": "2026-03-07 01:45:01",
+    "username": "yashc2003",
+    "role": "analytics",
+    "action": "single_prediction",
+    "insurance_type": "property",
+    "record_count": 1,
+    "details": "result=Claim, probability=0.0432",
+    "fraud_count": 0
+  },
+  {
+    "timestamp": "2026-03-07 01:54:16",
+    "username": "yashc2003",
+    "role": "analytics",
+    "action": "single_prediction",
+    "insurance_type": "auto",
+    "record_count": 1,
+    "details": "result=Claim, probability=0.0070",
+    "fraud_count": 0
+  },
+  {
+    "timestamp": "2026-03-07 01:59:48",
+    "username": "yashc2003",
+    "role": "analytics",
+    "action": "single_prediction",
+    "insurance_type": "health",
+    "record_count": 1,
+    "details": "result=Claim, probability=0.0954",
+    "fraud_count": 0
+  }
+]

@@ -1,0 +1,142 @@
+/* Main App Background */
+.stApp {
+    background:#0b0213aa;
+}
+
+
+
+/* Auth Area */
+.auth-page {
+    
+    text-align: center !important;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+.auth-page h1 {
+    margin: 0;
+    color: #7861dc;
+    text-align: center !important;
+}
+
+.auth-page p {
+    margin-top: 6px;
+    color: #334155;
+    text-align: center !important;
+}
+
+.auth-container {
+    max-width: 430px;
+    margin: 0 auto 12px auto;
+}
+
+.auth-box {
+    max-width: 430px;
+    margin: 0 auto;
+}
+
+
+
+
+/* Fraud Result */
+.result-fraud {
+    border-left: 6px solid #b91c1c;
+    background: #fef2f2;
+    border-radius: 10px;
+    padding: 15px;
+    font-weight: bold;
+    color: #660c0c !important;
+    line-height: 1.6;
+    font-size: 16px;
+    word-break: break-word;
+}
+
+/* Valid Claim Result */
+.result-claim {
+    border-left: 6px solid #5ab818;
+    background: #f0fdf4;
+    border-radius: 10px;
+    padding: 15px;
+    font-weight: bold;
+    color: #14532d !important;
+    line-height: 1.6;
+    font-size: 16px;
+    word-break: break-word;
+}
+
+/* Buttons */
+
+.form_submit_button{
+    background-color: #aa1212;
+    color: white;
+}
+.stButton>button {
+    background-color: #2563eb;
+    color: white;
+    border-radius: 8px;
+    height: 40px;
+    font-size: 16px;
+}
+
+.stButton>button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Input boxes */
+.stTextInput input,
+.stNumberInput input,
+.stSelectbox div[data-baseweb="select"] > div {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 8px !important;
+}
+
+.stTextInput input::placeholder,
+.stNumberInput input::placeholder {
+    color: #64748b !important;
+}
+
+/* Fraud risk gauge */
+.gauge-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 8px 0 2px 0;
+}
+
+.gauge-ring {
+    --size: 200px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: conic-gradient(var(--gauge-color) calc(var(--value) * 1%), #e2e8f0 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gauge-center {
+    width: 138px;
+    height: 138px;
+    border-radius: 50%;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 0 1px #e2e8f0;
+}
+
+.gauge-value {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+    color: #0f172a;
+}
+
+.gauge-label {
+    margin-top: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+}

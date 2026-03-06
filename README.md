@@ -1,2 +1,43 @@
-# InsuraGuard-ML
-Insurance Fraud Detection Using Machine Learning
+﻿# Insurance Fraud Detection - ML Baseline
+
+This project provides a practical machine-learning baseline for insurance fraud detection and a lightweight frontend.
+
+## What it does
+- Generates a synthetic claims dataset (if you don't have one yet).
+- Trains a fraud classifier with preprocessing and class imbalance handling.
+- Evaluates fraud-focused metrics and saves artifacts.
+- Provides a Streamlit frontend for single and batch predictions.
+
+## Project structure
+- `src/generate_sample_data.py` - creates `data/insurance_claims.csv`
+- `src/train.py` - trains and evaluates model, saves outputs in `models/` and `reports/`
+- `app.py` - Streamlit frontend for interactive fraud scoring
+- `requirements.txt` - Python dependencies
+
+## Quick start
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+
+python src/generate_sample_data.py
+python src/train.py
+streamlit run app.py
+```
+
+## Frontend features
+- Single claim prediction form
+- Batch CSV scoring and download
+- Dashboard cards for threshold and model metrics
+- Training data preview
+
+## Outputs
+- `models/fraud_model.joblib`
+- `reports/metrics.json`
+- `reports/classification_report.txt`
+
+## Notes
+- This is a baseline template to customize with real claims data.
+- Target column expected by training script: `is_fraud` (0/1).
+- Batch CSV input columns expected by frontend:
+  `insurance_type, age, vehicle_age, claim_amount, annual_premium, incidents, witness_count, policy_type, collision_type, police_report`
