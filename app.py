@@ -379,6 +379,20 @@ def render_auth_page() -> None:
 
 def render_sidebar(metrics: dict, threshold: float) -> None:
     with st.sidebar:
+        user_initial = (st.session_state["username"][:1] or "U").upper()
+        st.markdown(
+            f"""
+            <div class="sidebar-user-brand">
+                <div class="sidebar-user-avatar">{user_initial}</div>
+                <div class="sidebar-user-meta">
+                    <div class="sidebar-user-name">{st.session_state['username']}</div>
+                    <div class="sidebar-user-role">{st.session_state['role']}</div>
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+        st.divider()
         st.subheader("Account")
         st.write(f"User: `{st.session_state['username']}`")
         st.write(f"Role: `{st.session_state['role']}`")
@@ -685,10 +699,33 @@ def main() -> None:
         st.error("Model not found. Run `python src/train.py` first to generate `models/fraud_model.joblib`.")
         st.stop()
 
-    st.markdown('<div class="header-card">', unsafe_allow_html=True)
-    st.title("Insurance Fraud Detection System")
-    st.caption("Role-based modules with clean claim analysis workflow.")
-    st.markdown("</div>", unsafe_allow_html=True)
+    st.markdown(
+        """
+        <div class="top-brand-toolbar">
+            <div class="brand-mark brand-mark--header">
+                <div class="brand-icon">IG</div>
+                <div class="brand-text">
+                    <h1>InsuraGuard</h1>
+                </div>
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    st.markdown(
+        """
+        <div class="header-card">
+            <div class="header-shell">
+                <div class="header-left">
+                    <h2>Insurance Fraud Detection System</h2>
+                    <p>Role-based modules with clean claim analysis workflow.</p>
+                </div>
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
     render_sidebar(metrics, threshold)
 
