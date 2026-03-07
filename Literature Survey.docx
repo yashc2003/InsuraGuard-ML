@@ -1,0 +1,51 @@
+1. Literature Survey 
+The literature survey focuses on studying previous research, technologies, and 
+methodologies used in the field of insurance fraud detection. Insurance fraud has 
+become a major challenge for insurance companies across the world. Fraudulent 
+claims cause billions of dollars in losses every year, which affects both companies and 
+honest policyholders. Because of this, researchers and organizations have been 
+continuously working on developing intelligent systems to detect and prevent 
+fraudulent activities. 
+In traditional insurance systems, fraud detection was mostly done manually by human 
+investigators. Investigators had to analyze claim details, customer history, and various 
+supporting documents to identify suspicious activities. However, this manual process is 
+slow, expensive, and inefficient when dealing with large volumes of data. As the number 
+of insurance claims increases, it becomes more difficult for companies to detect fraud 
+using traditional methods. 
+To solve this problem, researchers introduced data mining and machine learning 
+techniques to automate the fraud detection process. Machine learning algorithms can 
+analyze large datasets and identify patterns that may indicate fraudulent behavior. 
+These systems are capable of learning from historical data and making predictions 
+about new insurance claims. 
+Several machine learning algorithms have been studied and applied in fraud detection 
+systems. Some of the commonly used algorithms include: 
+1. Logistic Regression 
+Logistic Regression is widely used for classification problems. In insurance fraud 
+detection, it is used to classify claims as fraudulent or legitimate based on different 
+features such as claim amount, customer information, and accident details. 
+2. Decision Tree 
+Decision Tree algorithms create a tree-like structure to make decisions based on 
+different conditions. This method is easy to interpret and helps identify the important 
+factors that contribute to fraudulent claims. 
+3. Random Forest 
+Random Forest is an ensemble learning method that combines multiple decision trees 
+to improve prediction accuracy. It is highly effective in handling large datasets and 
+reducing overfitting problems. 
+4. Support Vector Machine (SVM) 
+SVM is another classification algorithm used in fraud detection. It works by finding the 
+optimal boundary that separates fraudulent claims from legitimate claims. 
+5. Neural Networks 
+Artificial Neural Networks are inspired by the human brain and are capable of identifying 
+complex patterns in data. These models are often used in advanced fraud detection 
+systems. 
+In addition to machine learning algorithms, several data preprocessing techniques are 
+also used to improve model performance. These techniques include data cleaning, 
+feature selection, normalization, and handling missing values. Proper data 
+preprocessing ensures that the model can learn effectively from the dataset. 
+Recent studies also focus on real-time fraud detection systems that can analyze 
+claims immediately after submission. These systems use advanced analytics and 
+machine learning models to identify suspicious claims instantly and alert investigators. 
+The proposed project builds a machine learning-based system that analyzes insurance 
+claim data and predicts whether a claim is fraudulent or legitimate. By using intelligent 
+algorithms and historical data, the system aims to improve the efficiency and accuracy 
+of fraud detection.
