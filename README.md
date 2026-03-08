@@ -25,6 +25,34 @@ python src/train.py
 streamlit run app.py
 ```
 
+## Deployment
+
+### Option 1: Render (recommended)
+This repo includes a `render.yaml` blueprint and `Procfile`.
+
+1. Push this project to GitHub.
+2. In Render, choose **New +** -> **Blueprint**.
+3. Connect your GitHub repo and deploy.
+4. Set `MONGO_URI` only if you want MongoDB (optional).  
+   If not set, the app automatically uses local JSON files in `data/`.
+
+### Option 2: Streamlit Community Cloud
+1. Push this project to GitHub.
+2. Go to Streamlit Community Cloud and create a new app.
+3. Select:
+   - Repository: your repo
+   - Branch: your branch
+   - Main file path: `app.py`
+4. Add optional secrets only if you use MongoDB:
+   - `MONGO_URI`
+   - `MONGO_DB_NAME`
+
+### Required files already present
+- `requirements.txt`
+- `.streamlit/config.toml`
+- `Procfile`
+- `render.yaml`
+
 ## Frontend features
 - Single claim prediction form
 - Batch CSV scoring and download
