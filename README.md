@@ -28,7 +28,7 @@ streamlit run app.py
 ## Deployment
 
 ### Option 1: Render (recommended)
-This repo includes a `render.yaml` blueprint and `Procfile`.
+This repo includes a `render.yaml` blueprint and `Procfi.
 
 1. Push this project to GitHub.
 2. In Render, choose **New +** -> **Blueprint**.
@@ -46,7 +46,7 @@ This repo includes a `render.yaml` blueprint and `Procfile`.
 4. Add optional secrets only if you use MongoDB:
    - `MONGO_URI`
    - `MONGO_DB_NAME`
-
+5. URL Deployed App : 'https://yfnk5jke2fgkrewyjx8rpx.streamlit.app/'
 ### Option 3: Azure App Service (Linux)
 This repo now includes:
 - `startup.sh` for Streamlit startup on Azure
