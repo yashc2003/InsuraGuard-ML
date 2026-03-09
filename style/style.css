@@ -1,6 +1,19 @@
+:root {
+    --bg-main: #04020f;
+    --bg-top: #05101f;
+    --panel: #060a24;
+    --panel-soft: #0a1434;
+    --border: #22315d;
+    --text-main: #f8fafc;
+    --text-soft: #b9c2db;
+    --accent: #ff3a3a;
+}
 
 .stApp {
-    background:#0b0213aa;
+    background:
+        linear-gradient(180deg, var(--bg-top) 0px, #06011a 72px, var(--bg-main) 260px),
+        radial-gradient(1000px 420px at 80% -120px, #0b1f3f 0%, transparent 70%);
+    color: var(--text-main);
 }
 
 /* Hide Streamlit top header bar (Deploy + menu) */
@@ -35,8 +48,8 @@ header[data-testid="stHeader"],
     top: 1px;
     right: 16px;
     z-index: 1000;
-    background: rgba(8, 4, 37, 0.989);
-    border: 1px solid rgba(148, 163, 184, 0.3);
+    background: rgba(4, 10, 28, 0.96);
+    border: 1px solid var(--border);
     border-radius: 12px;
     padding: 6px 10px;
     backdrop-filter: blur(6px);
@@ -72,14 +85,14 @@ header[data-testid="stHeader"],
 
 .brand-text h1 {
     margin: 0;
-    color: #e2e8f0;
+    color: var(--text-main);
     font-size: 30px;
     line-height: 1.1;
 }
 
 .brand-text p {
     margin: 2px 0 0;
-    color: #cbd5e1;
+    color: var(--text-soft);
 }
 
 
@@ -93,22 +106,22 @@ header[data-testid="stHeader"],
 
 .auth-page h1 {
     margin: 0;
-    color: #7861dc;
+    color: var(--text-main);
     text-align: center !important;
 }
 
 .auth-page p {
     margin-top: 6px;
-    color: #334155;
+    color: var(--text-soft);
     text-align: center !important;
 }
 
 .header-card {
     margin-bottom: 14px;
-    background: rgba(15, 23, 42, 0.45);
-    border: 1px solid rgba(148, 163, 184, 0.25);
+    background: var(--panel);
+    border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 12px 16px;
+    padding: 22px 28px;
 }
 
 .header-shell {
@@ -120,13 +133,29 @@ header[data-testid="stHeader"],
 
 .header-left h2 {
     margin: 0;
-    color: #f8fafc;
+    color: var(--text-main);
     font-size: 28px;
 }
 
 .header-left p {
     margin: 4px 0 0 0;
-    color: #cbd5e1;
+    color: var(--text-soft);
+}
+
+.module-card {
+    margin-top: 14px;
+    background: transparent;
+    border: 1px solid rgba(34, 49, 93, 0.6);
+    border-radius: 12px;
+    padding: 16px;
+}
+
+h1, h2, h3, [data-testid="stMarkdownContainer"] h4 {
+    color: var(--text-main);
+}
+
+p, [data-testid="stCaptionContainer"] {
+    color: var(--text-soft);
 }
 
 @media (max-width: 768px) {
@@ -161,11 +190,11 @@ header[data-testid="stHeader"],
 
 .result-fraud {
     border-left: 6px solid #b91c1c;
-    background: #fef2f2;
+    background: #300b12;
     border-radius: 10px;
     padding: 15px;
     font-weight: bold;
-    color: #660c0c !important;
+    color: #ffd7d7 !important;
     line-height: 1.6;
     font-size: 16px;
     word-break: break-word;
@@ -174,11 +203,11 @@ header[data-testid="stHeader"],
 
 .result-claim {
     border-left: 6px solid #5ab818;
-    background: #f0fdf4;
+    background: #112718;
     border-radius: 10px;
     padding: 15px;
     font-weight: bold;
-    color: #14532d !important;
+    color: #d8ffe3 !important;
     line-height: 1.6;
     font-size: 16px;
     word-break: break-word;
@@ -190,8 +219,8 @@ div[data-testid="stFormSubmitButton"] > button {
     margin-left: 120px;
     min-height: 48px;
     border-radius: 12px;
-    border: 1px solid #0ea5a4;
-    background: linear-gradient(135deg, #8d0323, #2563eb);
+    border: 1px solid #8b1c28;
+    background: linear-gradient(135deg, #8f0d1f, #223a7a);
     color: #f8fafc;
     font-size: 17px;
     font-weight: 700;
@@ -213,7 +242,7 @@ div[data-testid="stFormSubmitButton"] > button:focus {
 
 /* Other buttons like logout/download */
 .stButton > button {
-    background: linear-gradient(135deg, #8d0323, #2563eb);
+    background: linear-gradient(135deg, #8f0d1f, #223a7a);
     color: #f8fafc;
     border-radius: 10px;
     height: 24px;
@@ -230,6 +259,30 @@ div[data-testid="stFormSubmitButton"] > button:focus {
     color: #0f172a !important;
     border: 1px solid #cbd5e1 !important;
     border-radius: 8px !important;
+}
+
+div[data-baseweb="tab-list"] {
+    border-bottom: 1px solid rgba(34, 49, 93, 0.75);
+}
+
+button[data-baseweb="tab"] {
+    color: #f2f4fb !important;
+}
+
+button[data-baseweb="tab"][aria-selected="true"] {
+    color: var(--accent) !important;
+    border-bottom: 2px solid var(--accent) !important;
+}
+
+div[data-testid="stAlert"][data-baseweb="notification"] {
+    background: #13274c;
+    border: 1px solid #28427a;
+    color: #9bc7ff;
+}
+
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #030714 0%, #060d23 100%);
+    border-right: 1px solid rgba(34, 49, 93, 0.55);
 }
 
 .stTextInput input::placeholder,

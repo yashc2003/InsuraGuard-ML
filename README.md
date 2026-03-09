@@ -47,6 +47,36 @@ This repo includes a `render.yaml` blueprint and `Procfile`.
    - `MONGO_URI`
    - `MONGO_DB_NAME`
 
+### Option 3: Azure App Service (Linux)
+This repo now includes:
+- `startup.sh` for Streamlit startup on Azure
+- `.github/workflows/azure-webapp-streamlit.yml` for CI/CD to Azure Web App
+
+#### A) One-time Azure setup (Portal)
+1. Create an **Azure Web App (Linux, Python 3.11)**.
+2. In **Configuration -> Application settings**, add:
+   - `SCM_DO_BUILD_DURING_DEPLOYMENT=true`
+   - `WEBSITES_PORT=8000`
+3. In **Configuration -> General settings -> Startup Command**, set:
+   - `bash startup.sh`
+4. If using MongoDB, add:
+   - `MONGO_URI`
+   - `MONGO_DB_NAME`
+
+#### B) GitHub Actions deployment
+1. Download the Web App **publish profile** from Azure Portal.
+2. In GitHub repo settings, add secret:
+   - `AZURE_WEBAPP_PUBLISH_PROFILE`
+3. Edit workflow file `.github/workflows/azure-webapp-streamlit.yml`:
+   - set `AZURE_WEBAPP_NAME` to your Azure Web App name
+4. Push to `main` branch to trigger deployment.
+
+#### C) Quick deploy with Azure CLI (optional)
+```bash
+az webapp config appsettings set --resource-group <rg-name> --name <webapp-name> --settings SCM_DO_BUILD_DURING_DEPLOYMENT=true WEBSITES_PORT=8000
+az webapp config set --resource-group <rg-name> --name <webapp-name> --startup-file "bash startup.sh"
+```
+
 ### Required files already present
 - `requirements.txt`
 - `.streamlit/config.toml`
